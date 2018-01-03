@@ -1,0 +1,35 @@
+{
+  "name": "postj",
+  "version": "0.0.0",
+  "description": "A simple command line application to post JSON files.",
+  "main": "./dist/index.js",
+  "typings": "./dist/index.d.ts",
+  "bin": "./bin/run.js",
+  "scripts": {
+    "build": "tsc -w",
+    "patch-release": "npm version patch && npm publish && git push --follow-tags",
+    "minor-release": "npm version minor && npm publish && git push --follow-tags"
+  },
+  "keywords": [
+    "post",
+    "json",
+    "Apache Kafka",
+    "Apache AVRO",
+    "schema registry",
+    "curl"
+  ],
+  "author": "Erik Vullings <erik.vullings@gmail.com> (http://www.tno.nl)",
+  "license": "MIT",
+  "dependencies": {
+    "avsc": "^5.1.2",
+    "command-line-args": "^4.0.7",
+    "command-line-usage": "^4.0.2",
+    "request": "^2.83.0"
+  },
+  "devDependencies": {
+    "@types/command-line-args": "^4.0.2",
+    "@types/node": "^8.5.2",
+    "@types/request": "^2.0.9",
+    "typescript": "^2.6.2"
+  }
+}

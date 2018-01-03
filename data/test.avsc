@@ -1,0 +1,31 @@
+{
+  "name": "test",
+  "namespace": "driver.eu",
+  "doc": "Test Message",
+  "type": "record",
+  "fields": [{
+      "name": "identifier",
+      "type": "string"
+    },
+    {
+      "name": "sender",
+      "type": "string"
+    },
+    {
+      "name": "sent",
+      "type": "string",
+      "doc": "TODO xs:dateTime Used pattern"
+    },
+    {
+      "name": "match",
+      "type": ["null", {
+        "type": "enum",
+        "name": "HandshakeMatch",
+        "symbols": ["BOTH", "CLIENT", "NONE"]
+      }, {
+        "type": "array",
+        "items": "HandshakeMatch"
+      }]
+    }
+  ]
+}
