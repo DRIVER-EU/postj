@@ -64,7 +64,7 @@ CommandLineInterface.sections = [
                 example: `$ ${npmPackage.name} http://localhost:1234/api -f data.json`
             }, {
                 desc: '02. Post an AVRO schema (in JSON).',
-                example: `$ ${npmPackage.name} http://localhost:3601/api/schema-registry/subjects/TOPIC/versions -a -f data\test.avsc`
+                example: `$ ${npmPackage.name} http://localhost:3601/api/schema-registry/subjects/TOPIC/versions -a -f data\\test.avsc`
             }, {
                 desc: '03. Override the default header.',
                 example: `$ ${npmPackage.name} http://localhost:1234/api -H "{ \"key1\": \"value1\" }" -f data.json`
