@@ -1,6 +1,6 @@
 {
   "name": "postj",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A simple command line application to post JSON files.",
   "main": "./dist/index.js",
   "typings": "./dist/index.d.ts",
