@@ -24,9 +24,14 @@ export class PostService {
       }
       const json = JSON.parse(data.toString());
       if (this.options.avro) {
-        // Check whether we are sending an AVRO schema
-        const avroSchema = avsc.Type.forSchema(json);
-        console.log('Sending valid AVRO schema: ' + avroSchema.name);
+        try {
+          // Check whether we are sending an AVRO schema
+          const avroSchema = avsc.Type.forSchema(json);
+          console.log('Sending valid AVRO schema: ' + avroSchema.name);
+        } catch (err) {
+          console.error('Error parsing schema, ' + err.message);
+          process.exit(1);
+        }
       }
       const body = { schema: JSON.stringify(json) };
       const requestOptions = {
