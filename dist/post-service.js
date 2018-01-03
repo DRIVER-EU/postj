@@ -30,8 +30,7 @@ class PostService {
                     console.log('Sending valid AVRO schema: ' + avroSchema.name);
                 }
                 catch (err) {
-                    console.error('Error parsing schema, ' + err.message);
-                    process.exit(1);
+                    console.warn('Warning parsing schema, ' + err.message);
                 }
             }
             const body = { schema: JSON.stringify(json) };

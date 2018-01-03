@@ -23,7 +23,7 @@ A simple command line application to post JSON messages.
 
 Although you can use 'curl' to post data, this can be quite cumbersome in case you are dealing with large JSON objects. Also on Windows, 'curl' often isn't installed. So this is a very simple utility that easily allows you to post a JSON file to an endpoint.
 
-Please note that the main reason to create this small utility was my need to easily register AVRO schema's with Apache Kafka. So the '-a' option is there, which will validate the schema too, and set the appropriate headers for the Kafka schema registry.
+Please note that the main reason to create this small utility was my need to easily register AVRO schema's with Apache Kafka. So the '-a' option is there, which will validate the schema too using the [avsc](https://github.com/mtth/avsc) library, and set the appropriate headers for the Kafka schema registry.
 
 Options
 
